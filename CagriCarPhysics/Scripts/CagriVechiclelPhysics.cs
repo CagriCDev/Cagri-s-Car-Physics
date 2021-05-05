@@ -126,12 +126,6 @@ public class CagriVechiclelPhysics : MonoBehaviour
        AdjustTorque(wheelHitL.forwardSlip);
        AdjustTorque(wheelHitR.forwardSlip);
 
-
-
-    
-
-          
-       
     }
     private void Acceleration(WheelInfos WheelInfos, float motor)
     {
