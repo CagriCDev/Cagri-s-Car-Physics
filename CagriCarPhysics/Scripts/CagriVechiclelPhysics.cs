@@ -34,7 +34,6 @@ public class CagriVechiclelPhysics : MonoBehaviour
         CalculatedMotor = maxMotorTorque - (myTractionControl * maxMotorTorque);
            myrb = GetComponent<Rigidbody>();
        // myrb.centerOfMass +=new Vector3(0, 0, 1.0f);
-       
     }
     public void WheelsPositionCheck(WheelInfos WheelInfos)
     {
@@ -174,9 +173,7 @@ public class CagriVechiclelPhysics : MonoBehaviour
 
     }
     private void ChgDeceleration(WheelInfos WheelInfos)
-
     {
-
         WheelInfos.leftWheelCollider.brakeTorque = 0;
         WheelInfos.rightWheelCollider.brakeTorque = 0;
     }
@@ -188,14 +185,11 @@ public class CagriVechiclelPhysics : MonoBehaviour
     }
     private void Brake(WheelInfos WheelInfos,float mtr)
     {
-
-
         WheelInfoss[0].leftWheelCollider.brakeTorque = decelerationForce;
         WheelInfoss[0].rightWheelCollider.brakeTorque = decelerationForce;
 
         WheelInfos.leftWheelCollider.brakeTorque = Mathf.Infinity;
         WheelInfos.rightWheelCollider.brakeTorque = Mathf.Infinity;
-
     }
     void TiltoverFrontBack(float tiltOverValue, float tiltzero) // tiltovervalue ileri geri yigilma durumu**
     {
@@ -207,9 +201,7 @@ public class CagriVechiclelPhysics : MonoBehaviour
     }
     void TiltoverFrontBack( float tiltzero) // tiltovervalue ileri geri yigilma durumu**
     {
-       
         carBody.transform.rotation = Quaternion.Lerp(carBody.transform.rotation, new Quaternion(0f, carBody.transform.rotation.y, carBody.transform.rotation.z, carBody.transform.rotation.w), Time.fixedDeltaTime * 10f);
-
     }
 
     void TiltOverSides()
